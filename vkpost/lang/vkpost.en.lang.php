@@ -1,4 +1,13 @@
 <?php
+/**
+ * vkpost language file
+ *
+ * @package vkpost
+ * @version 0.2
+ * @author CrazyFreeMan
+ * @copyright Copyright (c) CrazyFreeMan 2014
+ * @license BSD
+ */
 $L["cfg_vk_isgroup"] = array("Post in the group","Or the user's wall");
 $L["cfg_vk_access_token"] = array("Access Token","Available when creating an application and obtain rights");
 $L["cfg_vk_id"] = array("ID","User ID or communities on the wall which is to be published record");
@@ -12,6 +21,8 @@ $L["cfg_vk_enable_log"] = "enable log";
 $L["vkpost_yes"] = "Yes";
 $L["vkpost_no"] = "No";
 $L["vkpost_send"] = "Send to wall VK";
+$L["vkpost_send_sh"] = " + VK";
+$L["vkpost_only_forpro"] = "Only for PRO";
 
 
 ?> 

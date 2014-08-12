@@ -9,7 +9,7 @@ Hooks=page.add.add.done,page.edit.update.done
  * vkpost
  *
  * @package vkpost
- * @version 0.1
+ * @version 0.2
  * @author CrazyFreeMan
  * @copyright Copyright (c) CrazyFreeMan 2014
  * @license BSD
@@ -26,7 +26,8 @@ if (cot_plugin_active('vkpost'))
 		if($vk_send == 1){	
 			$urltpm = (empty($rpage['page_alias'])) ? cot_url('page', 'c='.$rpage['page_cat'].'&id='.$rpage['page_id'], '', true) : cot_url('page', 'c='.$rpage['page_cat'].'&al='.$rpage['page_alias'], '', true);
 			$url = (strpos($urltpm, '://') === false) ? COT_ABSOLUTE_URL . $urltpm : $urltpm;
-			$text = $rpage['page_desc'];			
+			$cat_title = (!empty($structure['page'][$rpage['page_cat']]['tpath'])) ? $structure['page'][$rpage['page_cat']]['tpath'] : $structure['page'][$rpage['page_cat']]['title'];
+			$text = "[".$cat_title."] ".$rpage['page_desc'];							
 			postToVk($text,$url);  
 			
 		}		

@@ -11,12 +11,6 @@
 defined('COT_CODE') or die('Wrong URL');
 
 require_once cot_langfile('vkpost', 'plug');
-require_once cot_incfile('forms');
-
-function generate_vkpost_form(){
-	global $L;
-	return cot_radiobox('0', "vk_send", "1,0", $L["vkpost_yes"].",".$L["vkpost_no"] );
-}
 
 function postToVk($text,$link)
 {
@@ -53,4 +47,21 @@ function postToVk($text,$link)
 	 		}
 		cot_log($logtext, "plg");
 	}
+}
+
+function textProjectForPost($id){
+	global $db, $db_projects, $structure;
+	$sql = $db->query("SELECT * FROM $db_projects WHERE item_id=".$id." LIMIT 1");
+
+	if ($sql->rowCount() == 0)
+	{
+		cot_log("Prj not found", "plg");
+	}
+	$item = $sql->fetch();	
+	$text = '['.$structure['projects'][$item['item_cat']]['title'].'] - '.$item["item_title"].' '.$item["item_cost"];
+	if(cot_module_active('payments')){
+		global $cfg;
+		$text .= " ".$cfg['payments']["valuta"];
+	}
+	return $text;
 }
