@@ -39,6 +39,6 @@ https://oauth.vk.com/authorize?
 client_id=xxxxxxx&
 client_secret=xxxxxxxxxxxxxxxxx&
 code=xxxxxxxxxxxx&
-redirect_uri=http://api.vkontakte.ru/blank.html&
+&redirect_uri=https://oauth.vk.com/blank.html
 
 4.2. Видим ответ от сервера и в нем access_token:{“access_token”:”xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx”,”expires_in”:0,”user_id”:xxxxxxxx}

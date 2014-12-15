@@ -13,8 +13,8 @@ Auth_guests=R
 Lock_guests=W12345A
 Auth_members=R
 Lock_members=W12345A
-Requires_modules=page,projects
-Recommends_modules=paypro,payments
+Requires_modules=page
+Recommends_modules=paypro,payments,projects
 [END_COT_EXT]
   
 [BEGIN_COT_EXT_CONFIG]
