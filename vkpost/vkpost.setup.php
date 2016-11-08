@@ -18,14 +18,13 @@ Recommends_modules=paypro,payments,projects
 [END_COT_EXT]
   
 [BEGIN_COT_EXT_CONFIG]
-vk_isgroup=01:radio:0,1:1
+vk_isgroup=01:radio:0,1:1:
 vk_id=02:string:::
-vk_access_token=03:string
-vk_from_group=04:radio:0,1:1
-vk_services=05:string::twitter, facebook
-vk_enable_project_post=06:radio:0,1:1
-vk_enable_project_post_pro=07:radio:0,1:1
-vk_enable_log=08:radio:0,1:1
+vk_access_token=03:string:::
+vk_from_group=04:radio:0,1:1:
+vk_services=05:string::twitter, facebook:
+vk_enable_project_post=06:radio:0,1:1:
+vk_enable_project_post_pro=07:radio:0,1:1:
+vk_enable_log=08:radio:0,1:1:
 [END_COT_EXT_CONFIG] 
 ==================== */
-?> 
